@@ -18,3 +18,11 @@ function addTask(newTask: TaskInput) {
     tasks.push(newTaskData)
     return newTaskData
 }
+
+function listTask(): Task[] {
+    for (const task of tasks) {
+        console.log(`[${task.completed ? 'x' : ' '}] ${task.id}: ${task.title}`);
+    }
+
+    return tasks;
+}
